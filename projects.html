@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>NESH STORIES</title>
+
+    <!-- CSS bundles from your project -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="vendors/linericon/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
+    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+    <link rel="stylesheet" href="vendors/animate-css/animate.css">
+    <link rel="stylesheet" href="vendors/flaticon/flaticon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/style11.css">
+    <link rel="stylesheet" href="css/style12.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css'>
+    <link rel="stylesheet" href="css/style41.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="css/style61.css">
+    <link rel="stylesheet" href="css/style81.css">
+    <link rel="stylesheet" href="css/style91.css">
+
+    <!-- Process section scoped styles -->
+    <style>
+      /* ===== Process Section Styles (scoped) ===== */
+      .process-section{
+        background:#f5cbbe;            /* solid – only this color */
+        color:#2c2c2c;
+        padding:64px 0;
+      }
+      .process-heading{ color:#fff; margin-bottom:6px; font-weight:800; }
+      .process-sub{ color:#fff; opacity:.95; margin-bottom:20px; }
+
+      /* Filter buttons */
+      .process-filters{
+        display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:22px;
+      }
+      .process-filter{
+        border:1px solid rgba(0,0,0,.06);
+        background:#ffe7dd;
+        padding:10px 14px; border-radius:999px; cursor:pointer;
+        font-weight:600; transition:transform .05s ease;
+      }
+      .process-filter[aria-pressed="true"]{ background:#ffd3c3; }
+      .process-filter:active{ transform:scale(.98); }
+
+      /* Cards */
+      .process-card{
+        background:#fff; border-radius:18px; padding:18px;
+        box-shadow:0 10px 24px rgba(0,0,0,.08); height:100%;
+      }
+      .process-icon{ width:28px; height:28px; margin-bottom:8px; color:#b35656; }
+      .process-title{ font-weight:800; }
+      .process-text{ margin-bottom:0; }
+      .process-hide{ display:none !important; }
+      .home_banner_area .banner_inner{min-height:120px} /* keep banner slim */
+      .ftco-footer{padding-top:40px}
+    </style>
+  </head>
+
+  <body>
+    <!--================Header Menu Area =================-->
+    <header class="header_area">
+      <div class="top_menu">
+        <div class="container">
+          <div class="top_inner">
+            <div class="float-left"></div>
+          </div>
+        </div>
+      </div>
+      <div class="main_menu" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <a class="navbar-brand logo_h" href="index.html">
+              <img src="img/logo.png" alt=""><img src="img/logo-2.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+              <ul class="nav navbar-nav menu_nav ml-auto">
+                <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="tel:+918939063726">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!--================End Header =================-->
+
+    <!--================Home Banner Area =================-->
+    <section class="home_banner_area">
+      <div class="banner_inner">
+        <div class="container"><div class="row"></div></div>
+      </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+<!-- ========= Process / Steps Section (fixed) ========= -->
+<!-- ========= Process / Steps Section (12 steps) ========= -->
+<section class="process-section">
+  <div class="container">
+    <div class="text-center mb-3">
+      <h2 class="process-heading">Our Process</h2>
+      <p class="process-sub">From first chat to aftercare — a smooth, transparent journey.</p>
+    </div>
+
+    <!-- FILTERS -->
+    <div class="process-filters" role="tablist" aria-label="Process Filters">
+      <button class="process-filter" data-filter="modular" aria-pressed="true">Modular Interiors</button>
+      <button class="process-filter" data-filter="full">Full Home Interiors</button>
+      <button class="process-filter" data-filter="renovation">Home Renovation</button>
+      <button class="process-filter" data-filter="bare">Bare Shell Interiors</button>
+    </div>
+
+    <!-- GRID -->
+    <div class="row process-grid">
+
+      <!-- 1 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 process-col" data-step="1">
+        <div class="process-card h-100">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8z"/><path d="M8 9h8M8 13h5"/>
+            </svg>
+          </div>
+          <h5 class="process-title">1. Initial Consultation</h5>
+          <p class="process-text">We begin with a detailed meeting to fully understand your lifestyle, goals, and vision. This crucial step ensures the entire project is custom-tailored to your unique story and requirements.</p>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 process-col" data-step="2">
+        <div class="process-card h-100">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16l4-3h10a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 12h8M8 16h5"/>
+            </svg>
+          </div>
+          <h5 class="process-title">2. Site Documentation & Analysis</h5>
+          <p class="process-text">We meticulously document every aspect of the space and analyze your style preferences to create a comprehensive design brief that guides the project from start to finish.</p>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 process-col" data-step="3">
+        <div class="process-card h-100">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M17 14h4v7h-7v-4"/>
+            </svg>
+          </div>
+          <h5 class="process-title">3. Design & Planning Phase</h5>
+          <p class="process-text">We transform your ideas into thoughtful concepts—layouts, mood boards, and design plans—iterating with your feedback so the design reflects your story and functional needs.</p>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 process-col" data-step="4">
+        <div class="process-card h-100">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 12l9 5 9-5"/><path d="M3 17l9 5 9-5"/>
+            </svg>
+          </div>
+          <h5 class="process-title">4. Material & Finishes Selection</h5>
+          <p class="process-text">Collaborate with our experts to select high-quality materials and finishes that align with your aesthetic—ensuring both lasting durability and an elegant, cohesive look.</p>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 process-col" data-step="5">
+        <div class="process-card h-100">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5l-3 3V5a2 2 0 0 1 2-2h9"/>
+            </svg>
+          </div>
+          <h5 class="process-title">5. Feasibility Check</h5>
+          <p class="process-text">We review the design and selections to confirm practicality, structural soundness, and budget alignment—paving a smooth path from concept to reality.</p>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 process-col" data-step="6">
+        <div class="process-card h-100">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 3v18M7 8h2M15 8h2M7 16h2M15 16h2"/>
+            </svg>
+          </div>
+          <h5 class="process-title">6. Customization & Engineering</h5>
+          <p class="process-text">We engineer structural modifications and bespoke elements—including modular units, built-ins, and fixtures—custom-fit to your space.</p>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 process-col" data-step="7">
+        <div class="process-card h-100">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 7l-5 5 3 3 5-5V4h-3z"/><path d="M2 22l4-10 6 6-10 4z"/>
+            </svg>
+          </div>
+          <h5 class="process-title">7. On-Site Non-Modular Work</h5>
+          <p class="process-text">We begin the on-site civil & structural work—demolition, electrical, plumbing, and wall alterations—building a strong foundation for later stages.</p>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 process-col" data-step="8">
+        <div class="process-card h-100">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 3v18M7 8h2M15 8h2M7 16h2M15 16h2"/>
+            </svg>
+          </div>
+          <h5 class="process-title">8. Installation of Modular Units</h5>
+          <p class="process-text">We install all pre-fabricated modular units—kitchens, wardrobes, and storage systems—with precision for a seamless fit.</p>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 process-col" data-step="9">
+        <div class="process-card h-100">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M17 14h4v7h-7v-4"/>
+            </svg>
+          </div>
+          <h5 class="process-title">9. On-Site Customization</h5>
+          <p class="process-text">We fine-tune on site—modifications and adjustments to furniture and fixtures—so every element integrates perfectly with your space.</p>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 process-col" data-step="10">
+        <div class="process-card h-100">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5l-3 3V5a2 2 0 0 1 2-2h9"/>
+            </svg>
+          </div>
+          <h5 class="process-title">10. SNAG Clearance & Site Finalization</h5>
+          <p class="process-text">We conduct a meticulous final inspection and resolve minor snags. The site is cleaned and cleared—ready for the reveal.</p>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 process-col" data-step="11">
+        <div class="process-card h-100">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 13v6a2 2 0 0 1-2 2H9l-4-4"/><path d="M16 3h5v5"/><path d="M16 8l5-5"/>
+            </svg>
+          </div>
+          <h5 class="process-title">11. The Grand Reveal & Handover</h5>
+          <p class="process-text">We walk you through the finished space and ensure every detail meets your expectations before the official handover.</p>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 process-col" data-step="12">
+        <div class="process-card h-100">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <h5 class="process-title">12. Maintenance & Aftercare</h5>
+          <p class="process-text">We provide guidance on caring for your new interiors and remain available for any post-installation support.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ========= /Process Section (12 steps) ========= -->
+<!-- ========= /Process Section (fixed) ========= -->
+<div id="process-duration" class="process-duration"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const FILTER_MAP = {
+    modular:    [1,2,3,4,5,6,7,8,9,10,11,12],
+    full:       [1,2,3,4,5,6,7,8,9,10,11,12],
+    bare:       [1,2,3,4,5,6,7,8,9,10,11,12],
+    renovation: [1,2,3,4,5,6,7,8,9,10,11,12]
+  };
+
+  const DURATION_MAP = {
+    modular:    "⏳ Estimated Timeline: ~45 days after Design Phase",
+    full:       "⏳ Estimated Timeline: ~60 days after Design Phase",
+    bare:       "⏳ Estimated Timeline: ~130 days total",
+    renovation: "⏳ Estimated Timeline: ~90 days total"
+  };
+
+  const buttons  = document.querySelectorAll('.process-filter');
+  const cols     = Array.from(document.querySelectorAll('.process-col'));
+  const duration = document.getElementById('process-duration');
+
+  // Debug: see what the DOM actually has
+  console.log('Process cols count:', cols.length, 'steps:', cols.map(c => c.dataset.step));
+
+  // Safety: remove any stray d-none from previous scripts/CSS
+  cols.forEach(c => c.classList.remove('d-none'));
+
+  function applyFilter(name){
+    const allow = new Set(FILTER_MAP[name] || []);
+    cols.forEach(c => {
+      const step = Number(c.dataset.step || 0);
+      c.classList.toggle('d-none', !allow.has(step));
+    });
+    buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.filter === name)));
+    if (duration) duration.textContent = DURATION_MAP[name] || "";
+  }
+
+  buttons.forEach(btn => btn.addEventListener('click', () => applyFilter(btn.dataset.filter)));
+
+  // Default view
+  applyFilter('full');
+});
+</script>
+
+    <!-- Footer -->
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <img src="img/logo-2.png" alt="NESH Logo" style="height: 40px;">
+              <p>At Neshstories, we believe every space should embody the essence of its inhabitants. 
+                “Create the Story You Love, with Neshstories”</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Project</a></li>
+                <li><a href="tel:+918939063726">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Services</h2>
+              <ul class="list-unstyled">
+                <li><a href="projects.html">Modular Interiors</a></li>
+                <li><a href="projects.html">Full Home Interiors</a></li>
+                <li><a href="projects.html">Home Renovation</a></li>
+                <li><a href="projects.html">Bare Shell Interiors</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Have a Question?</h2>
+              <div class="block-23 mb-3">
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="https://www.google.com/maps?q=17/7a+Nalwar+Street,+East+Tambaram,+Chennai+600059" target="_blank">
+                      <strong>Address:</strong> 17/7a, Nalwar street, East Tambaram, Chennai-600059.
+                    </a>
+                  </li>
+                    <li><span class="icon icon-phone"></span>
+  <span class="text"><strong>Contact:</strong></span><br>
+  <a href="tel:+918939063726">8939063726</a>, 
+  <a href="tel:+916382698780">6382698780</a>
+</li>
+
+                  <li>
+                    <a href="mailto:nesthomeinfo0322@gmail.com">
+                      <span class="icon icon-envelope"></span>
+                      <span class="text"><strong>Email:</strong> nesthomeinfo0322@gmail.com</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <div class="social-box">
+              <ul>
+                <li><a href="https://www.facebook.com/profile.php?id=61577803125243"><i class="fa fa-facebook"></i><span>Facebook</span></a></li>
+                <li><a href="https://x.com/neshstories"><i class="fa-brands fa-x-twitter"></i><span>X</span></a></li>
+                <li><a href="mailto:nesthomeinfo0322@gmail.com"><i class="fa fa-google"></i><span>Gmail</span></a></li>
+                <li><a href="https://www.instagram.com/neshstories"><i class="fa fa-instagram"></i><span>Instagram</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://wa.me/918939063726?text=Hello%20I%20want%20more%20information" class="float" target="_blank">
+      <i class="fa fa-whatsapp my-float"></i>
+    </a>
+
+    <!-- JS bundles -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="vendors/lightbox/simpleLightbox.min.js"></script>
+    <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="vendors/isotope/isotope-min.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendors/counter-up/jquery.counterup.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+    <script src="js/gmaps.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/script81.js"></script>  
+
+  </body>
+</html>

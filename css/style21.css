@@ -1,0 +1,167 @@
+/* Google Font Import */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+body {
+background: #f5cbbe;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #000000;
+}
+
+
+.marquee-wrap {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+.marquee-wrap,
+.marquee-wrap ul {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+.marquee-wrap {
+  padding: 30px 0 10px 0;
+}
+
+.marquee-wrap > li {
+  margin: 45px 0;
+}
+
+.marquee-wrap > li {
+  display: flex;
+  align-items: center;
+  width: var(--scroller-size);
+  will-change: transform;
+  animation: text-scroller 30000ms linear 0ms normal infinite;
+  text-indent: 0;
+  justify-content: space-around;
+  -webkit-transition: all 3000ms linear 0ms;
+  -moz-transition: all 3000ms linear 0ms;
+  -ms-transition: all 3000ms linear 0ms;
+  -o-transition: all 3000ms linear 0ms;
+  transition: all 3000ms linear 0ms;
+  white-space: nowrap;
+}
+@keyframes text-scroller {
+  100% {
+    transform: translateX(calc(var(--scroller-size)*-0.5));
+  }
+}
+.marquee-wrap > li:nth-child(2) {
+  animation-direction: reverse;
+  color: rgb(0, 0, 0);
+}
+.marquee-wrap > li > ul li {
+  display: inline-block;
+  padding: 0 4vw;
+  font-size: 3.5vw;
+  text-transform: uppercase;
+}
+
+:root {
+  --scroller-size: 150vw;
+}
+@media only screen and (max-width: 600px) {
+  .marquee-wrap > li > ul li {
+    font-size: 3.5vw;  /* Mobile medium size */
+    padding: 0 2vw;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .marquee-wrap > li > ul li {
+    font-size: 4.5vw;  /* Small screen slightly bigger */
+    padding: 0 1.5vw;
+  }
+}
+
+.flex-body {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 27));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 27));
+  }
+}.slider {
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,      /* soft white */
+    #fce4ec 30%,     /* very light pink/rose */
+    #f5cbbe 70%,     /* peach / pastel */
+    #b76e79 100%     /* rose gold accent */
+  );
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  border-radius: 12px; /* keeps the soft look */
+}
+
+.slider::before,
+.slider::after {
+  background: linear-gradient(
+    to right,
+    #fce4ec 0%,      /* mild rose fade */
+    rgba(255, 255, 255, 0) 100% /* transparent */
+  );
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider .slide-track {
+  -webkit-animation: scroll 50s linear infinite;
+  animation: scroll 50s linear infinite;
+  display: flex;
+  width: calc(250px * 27);
+}
+.slider .slide {
+  height: 100px;
+  width: 250px;
+}
+
+.slider .slide img {
+  filter: saturate(0.5) brightness(0.85) contrast(0.9) opacity(0.9);
+  transition: filter 0.3s ease-in-out;
+}
+
+/* Hover பண்ணும்போது original நிறம் வரும் */
+.slider .slide img:hover {
+  filter: saturate(1) brightness(1) contrast(1) opacity(1);
+}
+html {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,244 @@
+/* =========================================================
+   Process Section + Filters + Modular Timeline (Scoped)
+   Save as: process.css  (or add to your main stylesheet)
+   ========================================================= */
+
+/* ---------- Theme tokens ---------- */
+:root{
+  --bg: #f5cbbe;           /* section background */
+  --text: #2c2c2c;
+  --card: #ffffff;
+  --accent: #b35656;       /* icons / headings tint */
+  --chip: #ffe7dd;
+  --chip-active: #ffd3c3;
+  --shadow-soft: 0 10px 24px rgba(0,0,0,.08);
+}
+
+/* utility (in case Bootstrap isn't available in this scope) */
+.d-none { display:none !important; }
+
+/* ---------- Process Section ---------- */
+.process-section{
+  background: var(--bg);
+  color: var(--text);
+  padding: 64px 0;
+}
+
+.process-heading{
+  color:#fff;
+  margin-bottom:6px;
+  font-weight:800;
+}
+
+.process-sub{
+  color:#fff;
+  opacity:.95;
+  margin-bottom:20px;
+}
+
+/* Filters (tabs/pills) */
+.process-filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+  margin-bottom:22px;
+}
+
+.process-filter{
+  border:1px solid rgba(0,0,0,.06);
+  background: var(--chip);
+  padding:10px 14px;
+  border-radius:999px;
+  cursor:pointer;
+  font-weight:600;
+  transition:transform .05s ease, background .2s ease;
+  user-select:none;
+}
+.process-filter[aria-pressed="true"]{
+  background: var(--chip-active);
+  outline:2px solid rgba(0,0,0,.06);
+}
+.process-filter:active{ transform:scale(.98); }
+
+/* Cards */
+.process-card{
+  background: var(--card);
+  border-radius:18px;
+  padding:18px;
+  box-shadow: var(--shadow-soft);
+  height:100%;
+}
+
+.process-icon{
+  width:28px;
+  height:28px;
+  margin-bottom:8px;
+  color: var(--accent);
+}
+
+.process-title{
+  font-weight:800;
+  margin:0 0 6px;
+}
+
+.process-text{
+  margin:0;
+}
+
+/* optional: make the row breathe a bit on small screens */
+@media (max-width: 640px){
+  .process-section{ padding:48px 0; }
+}
+
+/* ---------- Modular Timeline (scoped) ---------- */
+/* Keep it hidden by default; toggle via JS by removing .d-none */
+#modular-timeline{
+  position:relative;
+  padding:40px 0 60px;
+  background: var(--bg);
+}
+
+/* central line */
+#modular-timeline::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  bottom:0;
+  width:5px;
+  background:#C5CAE9;
+  transform:translateX(-50%);
+}
+
+#modular-timeline .container{
+  position:relative;
+  max-width:1000px;
+  margin:0 auto;
+}
+
+#modular-timeline .timeline-item{
+  width:100%;
+  margin-bottom:70px;
+  position:relative;
+}
+#modular-timeline .timeline-item::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+/* node dot */
+#modular-timeline .timeline-img{
+  width:30px;
+  height:30px;
+  background:#3F51B5;
+  border-radius:50%;
+  position:absolute;
+  left:50%;
+  margin-top:25px;
+  margin-left:-15px;
+  box-shadow:0 2px 8px rgba(0,0,0,.12);
+}
+
+/* card */
+#modular-timeline .timeline-content{
+  position:relative;
+  width:45%;
+  padding:14px 22px;
+  border-radius:16px;
+  background:#fff;
+  box-shadow: var(--shadow-soft);
+}
+
+/* arrow */
+#modular-timeline .timeline-content::after{
+  content:"";
+  position:absolute;
+  top:30px;
+  right:-15px;
+  width:0;
+  height:0;
+  border-style:solid;
+  border-width:10px 0 10px 15px;
+  border-color:transparent transparent transparent #fff;
+}
+
+/* alternate sides */
+#modular-timeline .timeline-item:nth-child(even) .timeline-content{
+  float:right;
+  padding:40px 22px 12px;
+}
+#modular-timeline .timeline-item:nth-child(even) .timeline-content::after{
+  left:-15px;
+  right:auto;
+  border-width:10px 15px 10px 0;
+  border-color:transparent #fff transparent transparent;
+}
+
+#modular-timeline .timeline-content h2{
+  margin:0 0 6px;
+  font-weight:800;
+  color:#3F51B5;
+}
+#modular-timeline .timeline-content p{
+  margin:0;
+  color: var(--text);
+}
+.process-duration {
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px 25px;
+  border-radius: 12px;
+  display: inline-block;
+  color: #fff; /* solid white text */
+  animation: shake 0.8s infinite, glow 2s infinite alternate;
+  background: transparent;
+}
+
+/* ✨ Glowing neon effect around text */
+@keyframes glow {
+  0%   { text-shadow: 0 0 5px #ff6ec7, 0 0 10px #ff512f, 0 0 15px #f5cbbe; }
+  50%  { text-shadow: 0 0 20px #fddb92, 0 0 30px #ff6ec7, 0 0 40px #ff512f; }
+  100% { text-shadow: 0 0 10px #ff512f, 0 0 20px #f5cbbe, 0 0 25px #ff6ec7; }
+}
+
+/* 🤯 Shake Animation */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-3px); }
+  40% { transform: translateX(3px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(3px); }
+  100% { transform: translateX(0); }
+}
+
+
+/* responsive timeline */
+@media (max-width: 768px){
+  #modular-timeline::before{
+    left:50px;
+    transform:none;
+  }
+  #modular-timeline .timeline-img{
+    left:50px;
+    margin-left:-15px;
+  }
+  #modular-timeline .timeline-content{
+    width:auto;
+    margin-left:70px;
+    float:none !important;
+  }
+  #modular-timeline .timeline-content::after{
+    left:-15px;
+    right:auto;
+    border-width:10px 15px 10px 0;
+    border-color:transparent #fff transparent transparent;
+  }
+}
+
+/* ---------- Minor helpers for section harmony ---------- */
+.home_banner_area .banner_inner{ min-height:120px; } /* keep banner slim above section */
+.ftco-footer{ padding-top:40px; }

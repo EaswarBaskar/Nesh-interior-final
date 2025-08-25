@@ -1,0 +1,191 @@
+/* ================== FONTS ================== */
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ================== CAROUSEL WRAPPER ================== */
+.carousel {
+  position: relative;
+  max-width: 1120px;
+  height: 560px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/* ================== SLIDES ================== */
+.carousel-item {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 38% 62%;   /* left (info) / right (image) */
+  background: #e6e6e6;
+  border-radius: 4px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  align-items: stretch;
+}
+.carousel-item.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* LEFT INFO PANEL */
+.carousel-item__info {
+  grid-column: 1;
+  grid-row: 1;
+  background: #fff;
+  padding: 60px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* RIGHT IMAGE PANEL */
+.carousel-item__image {
+  grid-column: 2;
+  grid-row: 1;
+  display:block;
+  width:100%;
+  height:100%;
+  min-height:560px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transform:none;
+}
+
+/* ================== TYPOGRAPHY ================== */
+.carousel-item__subtitle {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: .35em;
+  font-size: 11px;
+  color: #8a8a8a;
+  margin-bottom: 18px;
+}
+.carousel-item__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 22px;
+  word-break: keep-all;        /* வார்த்தை உடையாமல் இருக்க */
+  white-space: normal;         /* normal wrapping */
+  line-height: 1.2;            /* height கொஞ்சம் சீராக்க */
+  hyphens: none;               /* browser hyphenation தவிர்க்க */
+}
+
+.carousel-item__description {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.9;
+  color: #6f6f6f;
+  margin-bottom: 26px;
+}
+.carousel-item__btn {
+  font-family: 'Open Sans', sans-serif;
+  display: inline-block;
+  letter-spacing: .35em;
+  font-size: 11px;
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ================== NAVIGATION ================== */
+.carousel__nav {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  z-index: 5;
+}
+.carousel__arrow {
+  cursor: pointer;
+  padding: 10px 14px;
+}
+.carousel__arrow + .carousel__arrow {
+  border-left: 1px solid #e7e7e7;
+}
+
+/* ================== ANIMATIONS ================== */
+@keyframes slideInFromRight { 
+  from { transform: translateX(40px); opacity: 0 } 
+  to   { transform: none; opacity: 1 } 
+}
+@keyframes slideOutToLeft { 
+  from { transform: none; opacity: 1 } 
+  to   { transform: translateX(-40px); opacity: 0 } 
+}
+@keyframes slideInFromLeft { 
+  from { transform: translateX(-40px); opacity: 0 } 
+  to   { transform: none; opacity: 1 } 
+}
+@keyframes slideOutToRight { 
+  from { transform: none; opacity: 1 } 
+  to   { transform: translateX(40px); opacity: 0 } 
+}
+
+.carousel-item.anim-in-next  { animation: slideInFromRight .15s ease both; }
+.carousel-item.anim-out-next { animation: slideOutToLeft   .15s ease both; }
+.carousel-item.anim-in-prev  { animation: slideInFromLeft  .15s ease both; }
+.carousel-item.anim-out-prev { animation: slideOutToRight  .15s ease both; }
+
+/* Text fade-up inside entering slide */
+@keyframes fadeUp { 
+  from { opacity:0; transform:translateY(10px) } 
+  to   { opacity:1; transform:none } 
+}
+.carousel-item.anim-in-next .carousel-item__subtitle,
+.carousel-item.anim-in-prev .carousel-item__subtitle { animation: fadeUp .4s .08s ease both; }
+.carousel-item.anim-in-next .carousel-item__title,
+.carousel-item.anim-in-prev .carousel-item__title    { animation: fadeUp .45s .12s ease both; }
+.carousel-item.anim-in-next .carousel-item__description,
+.carousel-item.anim-in-prev .carousel-item__description { animation: fadeUp .45s .18s ease both; }
+
+/* ================== BACKGROUND IMAGES ================== */
+.carousel-item--1 .carousel-item__image {
+  background-image: url('https://images.pexels.com/photos/991012/pexels-photo-991012.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') !important;
+}
+.carousel-item--2 .carousel-item__image {
+  background-image: url('https://images.pexels.com/photos/921294/pexels-photo-921294.png?auto=compress&cs=tinysrgb&h=750&w=1260') !important;
+}
+.carousel-item--3 .carousel-item__image {
+  background-image: url('https://images.pexels.com/photos/92733/pexels-photo-92733.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260') !important;
+}
+.carousel-item--4 .carousel-item__image {
+  background-image: url('https://images.pexels.com/photos/1008732/pexels-photo-1008732.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260') !important;
+}
+.carousel-item--5 .carousel-item__image {
+  background-image: url('https://images.pexels.com/photos/1029614/pexels-photo-1029614.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') !important;
+}
+
+/* ===== MOBILE: show entering/exiting slides too ===== */
+@media (max-width: 768px){
+  /* default: non-active hidden */
+  .carousel-item{ position: static !important; display:none !important; opacity:1 !important; visibility:visible !important; transform:none !important; grid-template-columns:100% !important; }
+  .carousel-item.active{ display:block !important; }
+
+  /* entering / exiting during click — must be visible */
+  .carousel-item.anim-in-next,
+  .carousel-item.anim-in-prev,
+  .carousel-item.anim-out-next,
+  .carousel-item.anim-out-prev{
+    display:block !important;     /* <-- critical */
+    position: static !important;
+  }
+
+  /* image height on mobile */
+  .carousel-item__image{ width:100% !important; height:300px !important; min-height:300px !important; background-size:cover !important; background-position:center !important; }
+
+  .carousel{ height:auto !important; overflow:visible; }
+  .carousel__nav{ right:16px !important; bottom:16px !important; position:absolute !important; z-index:5; }
+}

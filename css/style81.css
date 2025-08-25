@@ -1,0 +1,58 @@
+/* ===== Process Section Styles (Rose Gold Theme) ===== */
+.process-section{
+  background: #f5cbbe;                /* very light rose backdrop */
+  padding: 60px 0;
+}
+
+.process-heading{
+  font-weight: 700;
+  letter-spacing: .2px;
+  margin: 0 0 .25rem;
+  color: #ffffff;                     /* rose gold heading */
+}
+
+.process-sub{
+  color: #ffffff;                     /* muted rose gold text */
+  margin: 0;
+}
+
+.process-card{
+  background: #ffffff;
+  border: 1px solid rgba(183,110,121,.25); /* rose gold border */
+  border-radius: 16px;
+  padding: 22px 22px;
+  box-shadow: 0 8px 24px rgba(183,110,121,.12);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.process-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(183,110,121,.25);
+  border-color: rgba(183,110,121,.45);
+}
+
+.process-icon{
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
+  color: #b76e79;       /* rose gold icon stroke */
+  opacity: .9;
+}
+.process-icon svg{
+  width: 100%;
+  height: 100%;
+  display:block;
+}
+
+.process-title{
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 4px 0 8px;
+  color: #7a3f47;      /* deeper rose gold title */
+}
+
+.process-text{
+  margin: 0;
+  color: #5e474a;      /* dark muted rose */
+  line-height: 1.65;
+  font-size: .97rem;
+}

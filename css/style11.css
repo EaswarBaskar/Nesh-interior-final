@@ -1,0 +1,79 @@
+/* -------------------- Body Style -------------------- */
+body {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 400;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  word-break: break-word;
+  font-family: "Epilogue", "Roboto", sans-serif;
+  margin: 0;
+
+background: #f5cbbe;
+color: #2c2c2c;
+
+}
+
+/* -------------------- Services Section -------------------- */
+/* ---------- Section ---------- */
+/* Section */
+.services {
+  padding: 2rem 0;
+  border-top: 2px solid #f7d9dc;
+}
+
+/* Wrap to keep content away from screen edges */
+.services .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-inline: 16px;
+}
+
+/* Desktop: grid */
+.maincontainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+/* Card */
+.services .box3 { min-width: 0; transition: .3s; }
+.services .box3 .gif {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 2px 2px 10px rgba(0,0,0,.25);
+}
+
+/* --- Mobile: horizontal strip with peeking cards --- */
+@media (max-width: 768px) {
+  .maincontainer {
+    display: flex;                 /* switch from grid */
+    overflow-x: auto;
+    gap: 12px;
+    padding: 4px 16px;             /* side padding so first/last aren't cut */
+    scroll-snap-type: x mandatory; /* snap scrolling */
+    -webkit-overflow-scrolling: touch;
+    scroll-padding-left: 16px;
+  }
+
+  .maincontainer::-webkit-scrollbar { display: none; }
+  .maincontainer { scrollbar-width: none; }
+
+  .services .box3 {
+    flex: 0 0 68%;                 /* width of each card on mobile */
+    scroll-snap-align: start;
+  }
+
+  /* optional: show a little peek of next card */
+  .services .box3:not(:last-child) { margin-right: 4px; }
+}
+
+/* Optional hover on devices that support it */
+@media (hover: hover) {
+  .services .box3:hover,
+  .services .box3 .gif:hover { border-radius: 28px; opacity: .95; }
+}
